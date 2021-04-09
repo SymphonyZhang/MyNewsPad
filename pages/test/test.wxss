@@ -1,0 +1,4 @@
+/* pages/test/test.wxss */
+.ph-style{
+  border: 2px silver solid;
+}
