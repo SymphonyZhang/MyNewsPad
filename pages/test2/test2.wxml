@@ -1,0 +1,14 @@
+<view>{{msg}}</view>
+<input type="text" placeholder="please input something" bindinput="changeMe"></input>
+<button bindtap="clickMe" data-val1="1" data-val2="2">点击我</button>
+
+<button bindtap="getUserProfile">获取用户信息</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getUserPhoneNumber" >获取用户手机号码</button>
+<button open-type="contact" bindcontact="getContact">联系客服</button>
+
+<view>{{msg2}}</view>
+<view>
+  <rich-text nodes="{{msg2}}"></rich-text>
+</view>
+
+<button bindtap="showAlert">显示对话框</button>
