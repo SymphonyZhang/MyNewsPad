@@ -123,28 +123,112 @@
      <input disabled > </input>
      <input maxlength="10"></input>
      ```
+- 
 
-     
+## 事件绑定
 
-   - 
+- 组件的点击事件用属性 `bindtap`指定js中的方法，在js中添加对应的方法
 
-   - 
+  - 普通点击
 
-   - 
+  ```html
+  <!-- wxml -->
+  <button bindtap="clickMe">点击我</button>
+  ```
 
-   - 
+  ```javascript
+  //js
+  clickMe(event){
+      console.log("点击了按钮")
+    },
+  ```
 
-   - 
+  - 传参点击
 
-   - 
+  ```html
+  <!-- wxml -->
+  <button bindtap="clickMe" data-val1="1" data-val2="2">点击我</button>
+  ```
 
-   - 
+  ```javascript
+  //js
+  clickMe(event){
+      console.log("点击了按钮",event.currentTarget.dataset) //点击了按钮 {val1: "1", val2: "2"}
+    },
+  ```
 
-   - 
+  
 
-   - 
+- 输入事件在`input`标签中使用`bindinput`标签指定js中的方法，在js中添加对应的方法
 
-   - 
+  ```html
+  <!-- wxml -->
+  <input type="text" placeholder="please input something" bindinput="changeMe"></input>
+  ```
 
-2. 
+  ```javascript
+  //js
+  changeMe(event){
+      console.log("输入了：",event.detail.value) //当在输入框中输入1时打印：    输入了： 1
+    },
+  ```
 
+  
+
+- 插值表达式
+  
+  
+
+```js
+//js
+data: {
+	msg:"Halo"
+  },
+```
+
+```html
+<!-- wxml -->
+<view>{{msg}}</view> <!-- 这样就可以获取到js中data里的msg的数据并显示在页面上 -->
+```
+
+- 显示插值表达式中的富文本内容
+
+```javascript
+//js
+  data: {
+    msg2:"<b>你好</b><p style='color:red'>嘿嘿嘿</p>"
+  },
+
+```
+
+```html
+<!-- wxml -->
+<view>
+    <!-- 只支持站外标签，不能使用本地资源，不支持交互事件 支持css中定义style不支持对标签进行设置样式-->
+  <rich-text nodes="{{msg2}}"></rich-text>
+</view>
+```
+
+```css
+/* wxss */
+/*这是不能让msg2中的b标签使用这个样式的*/
+b{
+  color:red
+}
+```
+
+需要修改成如下：
+
+```javascript
+//js
+  data: {
+    msg2:"<b class='bStyle'>你好</b><p style='color:red'>嘿嘿嘿</p>"
+  },
+```
+
+```css
+/* wxss */
+.bStyle{
+  color:red
+}
+```
