@@ -1,0 +1,56 @@
+<view class="head">
+  <input type="text" placeholder="请输需要搜索的内容" placeholder-style="color:gray"></input>
+</view>
+<view class="type-pad">
+  <block>
+    <text class="select">关注</text>
+  </block>
+  <block>
+    <text>推荐</text>
+  </block>
+  <block>
+    <text>视频</text>
+  </block>
+  <block>
+    <text>直播</text>
+  </block>
+  <block>
+    <text>影视</text>
+  </block>
+  <block>
+    <text>新闻</text>
+  </block>
+  <block>
+    <text>VLOG</text>
+  </block>
+</view>
+<view class="body">
+  <view class="item">
+    <view class="user-info">
+      <image src="/resource/image/userlogo.jpg"></image>
+      <text class="user-name">Symphony</text>
+      <text class="focus no-focus">关注</text>
+    </view>
+    <view class="title">
+      <text>只争朝夕，不负韶华</text>
+    </view>
+    <view class="content">
+      <video object-fit="fill"
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
+    </view>
+  </view>
+<view class="item">
+  <view class="user-info">
+      <image src="/resource/image/userlogo.jpg"></image>
+      <text class="user-name">Symphony</text>
+      <text class="focus no-focus">关注</text>
+    </view>
+    <view class="title">
+      <text>【特朗普: 希望中国购买美国生产的喷气发动机】 财联社2月19日讯，美国特朗普总统周二拒绝美国国会提出的一些对中国贸易的限制</text>
+    </view>
+    <view class="content">
+      <image src="https://img.cls.cn/images/20200219/aO0679Z16l.png" mode="widthFix"></image>
+    </view>
+</view>
+
+</view>

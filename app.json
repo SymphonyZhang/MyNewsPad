@@ -1,12 +1,13 @@
 {
   "pages":[
+    "pages/newslist/newslist",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "我的头条",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
